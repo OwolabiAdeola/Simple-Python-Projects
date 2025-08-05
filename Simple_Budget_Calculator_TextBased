@@ -1,0 +1,17 @@
+income = float(input("How much do you make monthly? ₦"))
+rent = float(input("How much do you pay as rent annualy? ₦"))
+food = float(input("How much do you spend on food monthly? ₦"))
+transport = float(input("How much do you spend on transport? ₦"))
+extra = float(input("How much do you spend on miscellaneous expenses? ₦"))
+
+monthly_rent =  rent / 12
+expenses =  monthly_rent + food + transport + extra
+balance  = income - expenses
+
+if balance <= 19999:
+    print(f"Your balance of ₦{balance} is approaching the red zone.")
+elif balance >= 20000:
+    print(f"You have a balance of ₦{balance}, and you can save it for a rainy day.")
+
+print(f"Your income is ₦{income}." )
+print(f"Your expense is ₦{expenses}.")
